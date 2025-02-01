@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caja Registradora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Login Section -->
+    <section id="login-section">
+      <h2>Inicio de Sesión</h2>
+      <input type="text" id="emaillog" placeholder="Usuario">
+      <input type="password" id="passwordlog" placeholder="Contraseña">
+      <button id="login-btn">Iniciar Sesión</button>
+      <button id="admin-access-btn">Administrador</button>
+    </section>
+
+    <!-- Login del Administrador -->
+    <section id="admin-login-section" style="display: none;">
+      <h2>Inicio de Sesión - Administrador</h2>
+      <input type="text" id="admin-username" placeholder="Usuario">
+      <input type="password" id="admin-password" placeholder="Contraseña">
+      <button id="admin-login-btn">Iniciar Sesión</button>
+    </section>
+
+    <!-- Panel del Administrador -->
+    <section id="admin-panel-section" style="display: none;">
+      <h2>Panel de Administrador</h2>
+      
+      <!-- Agregar Producto -->
+      <div>
+        <h3>Agregar Producto</h3>
+        <input type="text" id="new-product-name" placeholder="Nombre del Producto">
+        <input type="number" id="new-product-price" placeholder="Precio del Producto">
+        <button id="add-new-product-btn">Añadir Producto</button>
+      </div>
+      
+      <!-- Cambiar Tasa de Cambio -->
+      <div>
+        <h3>Cambiar Tasa de Cambio</h3>
+        <input type="number" id="exchange-rate" placeholder="Nueva Tasa de Cambio (Bs)">
+        <button id="update-exchange-rate-btn">Actualizar Tasa</button>
+      </div>
+
+      <button id="logout-admin-btn">Cerrar Sesión</button>
+    </section>
+
+    <!-- Registro de Cliente -->
+    <section id="client-section" style="display: none;">
+      <h2>Datos del Cliente</h2>
+      <input type="text" id="client-name" placeholder="Nombre del Cliente">
+      <input type="text" id="client-id" placeholder="Cédula o RIF">
+      <button id="client-next-btn">Siguiente</button>
+    </section>
+
+    <!-- Registro de Productos -->
+<section id="products-section" style="display: none;">
+  <h2>Productos Consumidos</h2>
+  <div id="total-display" style="text-align: right; font-weight: bold;"></div>
+  <div id="product-list"></div>
+  <input type="text" id="product-name" placeholder="Nombre del Producto">
+  <button id="add-product-btn">Añadir Producto</button>
+  <button id="payment-next-btn">Finalizar</button>
+</section>
+
+
+    <!-- Selección de Pago -->
+    <section id="payment-section" style="display: none;">
+      <h2>Método de Pago</h2>
+      <select id="payment-method">
+        <option value="cash">Efectivo</option>
+        <option value="card">Tarjeta</option>
+        <option value="transfer">Transferencia</option>
+      </select>
+      <button id="generate-invoice-btn">Generar Factura</button>
+    </section>
+
+    <!-- Factura -->
+    <section id="invoice-section" style="display: none;">
+      <h2>Factura</h2>
+      <div id="invoice"></div>
+      <button id="restart-btn">Nueva Venta</button>
+    </section>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth-compat.js"></script>
+
+  <script>
+
+    const firebaseConfig = {
+    apiKey: "AIzaSyBi-AJWp_t27ukmXWFJzFkcK2oS-N4TOvg",
+    authDomain: "cajaregistradora-916fd.firebaseapp.com",
+    databaseURL: "https://cajaregistradora-916fd-default-rtdb.firebaseio.com",
+    projectId: "cajaregistradora-916fd",
+    storageBucket: "cajaregistradora-916fd.appspot.com",
+    messagingSenderId: "946554428298",
+    appId: "1:946554428298:web:12e9ab202dff95da0a0673",
+    measurementId: "G-ZPMQGMXSV7"
+    };
+    
+    const app = firebase.initializeApp(firebaseConfig);
+    console.log("Firebase inicializado correctamente");
+    firebase.analytics();
+      </script>
+
+
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
