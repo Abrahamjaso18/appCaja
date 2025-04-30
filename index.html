@@ -14,6 +14,7 @@
       <input type="text" id="emaillog" placeholder="Usuario">
       <input type="password" id="passwordlog" placeholder="Contraseña">
       <button id="login-btn">Iniciar Sesión</button>
+      <button id="login-google">Iniciar Sesión con Google</button>
       <button id="admin-access-btn">Administrador</button>
     </section>
 
@@ -23,29 +24,52 @@
       <input type="text" id="admin-username" placeholder="Usuario">
       <input type="password" id="admin-password" placeholder="Contraseña">
       <button id="admin-login-btn">Iniciar Sesión</button>
+      <button id="login-google-ad">Iniciar Sesión con Google</button>
+      <button id="volver-btn">Volver</button>
     </section>
 
     <!-- Panel del Administrador -->
-    <section id="admin-panel-section" style="display: none;">
-      <h2>Panel de Administrador</h2>
-      
-      <!-- Agregar Producto -->
-      <div>
-        <h3>Agregar Producto</h3>
-        <input type="text" id="new-product-name" placeholder="Nombre del Producto">
-        <input type="number" id="new-product-price" placeholder="Precio del Producto">
-        <button id="add-new-product-btn">Añadir Producto</button>
-      </div>
-      
-      <!-- Cambiar Tasa de Cambio -->
-      <div>
-        <h3>Cambiar Tasa de Cambio</h3>
-        <input type="number" id="exchange-rate" placeholder="Nueva Tasa de Cambio (Bs)">
-        <button id="update-exchange-rate-btn">Actualizar Tasa</button>
-      </div>
+  <section id="admin-panel-section" style="display: none;">
+  <h2>Panel de Administrador</h2>
 
-      <button id="logout-admin-btn">Cerrar Sesión</button>
-    </section>
+  <!-- Botón para acceder a la sección de reportes -->
+  <button id="ver-reportes-btn">Ver Reportes</button>
+
+  <!-- Agregar Producto -->
+  <div>
+    <h3>Agregar Producto</h3>
+    <input type="text" id="new-product-name" placeholder="Nombre del Producto">
+    <input type="number" id="new-product-price" placeholder="Precio del Producto">
+    <input type="number" id="new-product-stock" placeholder="Cantidad en Stock">
+    <button id="add-new-product-btn">Añadir Producto</button>
+  </div>
+
+   <!-- Cambiar Stock -->
+  <div>
+    <h3>Cambiar Stock y </h3>
+    <select id="product-select-ad"></select>
+    <input type="number" id="product-price" placeholder="Nuevo Precio  (Bs)">
+    <input type="number" id="product-stock" placeholder="Cantidad Stock">
+    <button id="update-Product-btn">Actualizar Producto</button>
+  </div>
+
+  <!-- Cambiar Tasa de Cambio -->
+  <div>
+    <h3>Cambiar Tasa de Cambio</h3>
+    <input type="number" id="exchange-rate" placeholder="Nueva Tasa de Cambio (Bs)">
+    <button id="update-exchange-rate-btn">Actualizar Tasa</button>
+  </div>
+
+  <button id="logout-admin-btn">Cerrar Sesión</button>
+</section>
+
+<!-- Sección de Reportes -->
+  <section id="reporte-section" style="display: none;">
+    <h2>Reporte de Ventas del Día</h2>
+    <button id="generar-reporte-btn">Generar Reporte</button>
+    <div id="reporte-content"></div>
+    <button id="volver-admin-btn">Volver al Panel</button>
+  </section>
 
     <!-- Registro de Cliente -->
     <section id="client-section" style="display: none;">
@@ -53,17 +77,18 @@
       <input type="text" id="client-name" placeholder="Nombre del Cliente">
       <input type="text" id="client-id" placeholder="Cédula o RIF">
       <button id="client-next-btn">Siguiente</button>
+      
     </section>
 
-    <!-- Registro de Productos -->
+<!-- Registro de Productos -->
 <section id="products-section" style="display: none;">
-  <h2>Productos Consumidos</h2>
+  <h2>Productos a Comprar</h2>
   <div id="total-display" style="text-align: right; font-weight: bold;"></div>
   <div id="product-list"></div>
-  <input type="text" id="product-name" placeholder="Nombre del Producto">
-  <button id="add-product-btn">Añadir Producto</button>
+  <select id="product-select"></select>
   <button id="payment-next-btn">Finalizar</button>
 </section>
+
 
 
     <!-- Selección de Pago -->
@@ -83,6 +108,11 @@
       <div id="invoice"></div>
       <button id="restart-btn">Nueva Venta</button>
     </section>
+
+ 
+
+
+
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
@@ -113,3 +143,8 @@
   <script type="module" src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
