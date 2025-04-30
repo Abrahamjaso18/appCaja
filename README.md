@@ -17,8 +17,10 @@ Autenticación de usuarios: Sistema de login para empleados y administradores
     - Añadir nuevos productos
     - Actualizar tasas de cambio
     - Gestión de usuarios
+    - Generador de Reporte diario ventas productos bajos en stock
  
    Tecnologías utilizadas:
+  
 Frontend: HTML5, CSS3, JavaScript (ES6+)
 
 Backend: Firebase (Authentication, Realtime Database)
