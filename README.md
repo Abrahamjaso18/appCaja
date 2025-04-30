@@ -26,3 +26,7 @@ Frontend: HTML5, CSS3, JavaScript (ES6+)
 Backend: Firebase (Authentication, Realtime Database)
 
 Dependencias: Firebase SDK (v11.2.0)
+
+Demo:
+
+Pureba la aplicacion aqui: https://caja-registradora-nueva.web.app/
