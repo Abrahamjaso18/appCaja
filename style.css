@@ -7,7 +7,7 @@ body {
 }
 
 * {
-  box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño final del elemento */
+  box-sizing: border-box; 
 }
 
 #app {
@@ -35,14 +35,14 @@ input, select, button {
 }
 
 button {
-  background: #6a121f;
+  background: #090a69;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background: #6a121f;
+  background: #090a69;
 }
 
 #invoice {
@@ -50,4 +50,76 @@ button:hover {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 50px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Contenedor de los botones y cantidad */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaciado entre botones */
+}
+
+/* Controles de cantidad (botón menos, número, botón más) */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Estilo de los botones */
+.quantity-btn, .remove-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.minus-btn, .plus-btn {
+  background-color: #090a69;
+  color: white;
+}
+
+.remove-btn {
+  background-color: #d62d2d;
+  color: white;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#reporte-section, #productos-bajo-stock-section {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#reporte-content, #productos-bajo-stock-content {
+  margin-top: 10px;
 }
