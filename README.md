@@ -1,1 +1,3 @@
-App Caja registradora
+App Caja registradora 
+
+Esta aplicacion permite facturar productos 
